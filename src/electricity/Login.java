@@ -227,7 +227,7 @@ public class Login implements ActionListener{
             try{
                 if(rs.next()){
                 String meter = rs.getString("meter_no");
-                new Project(meter, user).setVisible(true);
+                new Project(meter, user);
                 frame.dispose();
                 }else{
                     new popupincorrect(10,wrong,"Incorrect username or password! ");
