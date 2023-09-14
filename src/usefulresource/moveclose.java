@@ -66,13 +66,9 @@ class moveclose{
                 close.setBorder(null);
             }
         });
-        close.addActionListener(new ActionListener(){
-            @Override
-            public void actionPerformed(ActionEvent e)
-            {
-                //new Login();
-                System.exit(0);
-            }
+        close.addActionListener((ActionEvent e) -> {
+            //new Login();
+            System.exit(0);
         });
         frame.add(close);
     }

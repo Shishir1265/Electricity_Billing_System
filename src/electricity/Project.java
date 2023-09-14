@@ -106,8 +106,8 @@ class Project
           for(int i=0;i<str.length();i++){
             try{
               Thread.sleep(20);
-            }catch(Exception e){
-              e.printStackTrace();
+            }catch(InterruptedException e){
+                System.out.println("hellllllll");
             }
             area.setText(area.getText()+str.charAt(i));
           }

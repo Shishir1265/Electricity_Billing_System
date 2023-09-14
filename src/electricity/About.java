@@ -67,7 +67,7 @@ class About implements ActionListener
     }
     public static void main(String[] args) {
         //JFrame.setDefaultLookAndFeelDecorated(true);
-        new About();
+        About about = new About();
     }
     @Override
     public void actionPerformed(ActionEvent e) {

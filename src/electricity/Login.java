@@ -10,10 +10,6 @@ import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseMotionAdapter;
 import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.util.Arrays;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.swing.BorderFactory;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
@@ -92,12 +88,8 @@ public class Login implements ActionListener{
         min.setBorder(null);
         min.setFocusable(false);
         min.setContentAreaFilled(false);
-        min.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e)
-            {
-                frame.setState(JFrame.ICONIFIED);
-            }
+        min.addActionListener((ActionEvent e) -> {
+            frame.setState(JFrame.ICONIFIED);
         });
 
         Font f = new Font("Verdana", Font.PLAIN, 14);
