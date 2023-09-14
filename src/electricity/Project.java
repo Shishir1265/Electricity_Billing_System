@@ -5,38 +5,27 @@ import java.awt.Dimension;
 import java.awt.Font;
 import java.awt.Image;
 import java.awt.Toolkit;
-<<<<<<< HEAD
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 import javax.swing.BorderFactory;
-=======
-
->>>>>>> b6b7790224d388c0f05a7cfa341fef09c9e01d72
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JLayeredPane;
 import javax.swing.JMenuBar;
-<<<<<<< HEAD
 import javax.swing.JPasswordField;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
-=======
->>>>>>> b6b7790224d388c0f05a7cfa341fef09c9e01d72
 
 class Project
 {
   JFrame frame;
   JLabel background;
-<<<<<<< HEAD
   JButton notice;
   JTextField tf;
   JPasswordField p;
-=======
-  JButton button;
->>>>>>> b6b7790224d388c0f05a7cfa341fef09c9e01d72
   String meter;
   String person;
   public Project(String meter, String person)
@@ -46,21 +35,13 @@ class Project
     
     Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
     frame = new JFrame();
-<<<<<<< HEAD
     frame.setIconImage(new ImageIcon(ClassLoader.getSystemResource("icon/icon.png")).getImage());
-=======
-    frame.setIconImage(new ImageIcon("icon/icon.png").getImage());
->>>>>>> b6b7790224d388c0f05a7cfa341fef09c9e01d72
     frame.setBounds(0, 0,(int)screenSize.getWidth()+10,(int)screenSize.getHeight()-35);
     frame.setLocationRelativeTo(null);
     frame.setLayout(null);
     frame.setResizable(false);
 
-<<<<<<< HEAD
     ImageIcon img = new ImageIcon(ClassLoader.getSystemResource("icon/1.png"));
-=======
-    ImageIcon img = new ImageIcon("icon/1new.png");
->>>>>>> b6b7790224d388c0f05a7cfa341fef09c9e01d72
     Image img1 = img.getImage().getScaledInstance(frame.getWidth(),frame.getHeight(),Image.SCALE_DEFAULT);
     background = new JLabel(new ImageIcon(img1));
     background.setBounds(0, 0,frame.getWidth(),frame.getHeight());
@@ -71,7 +52,6 @@ class Project
     mb.setBackground(new Color(0,0,0,0));
     new menubar(mb, person, frame, meter);
 
-<<<<<<< HEAD
     JLabel sign = new JLabel("Sign In");
     sign.setForeground(new Color(36,134,33));
     sign.setBounds(1221,11,111,37);
@@ -152,21 +132,10 @@ class Project
     p.setOpaque(false);
     p.setBackground(new Color(0,0,0,0));
     p.setCaretColor(new Color(0, 0, 0, 0));
-=======
-    button = new JButton("Sign In");
-    button.setForeground(new Color(36,134,33));
-    button.setBounds(1205,12,111,37);
-    button.setFont(new Font("Segoe UI", Font.BOLD, 24));
-    button.setBorder(null);
-    button.setFocusable(false);
-    button.setContentAreaFilled(false);
-    //button.setBackground(new Color(0, 0, 0, 0));
->>>>>>> b6b7790224d388c0f05a7cfa341fef09c9e01d72
 
     JLayeredPane layer = new JLayeredPane();
     layer.setBounds(0, 0,frame.getWidth(),frame.getHeight());
     layer.add(background,Integer.valueOf(0));
-<<<<<<< HEAD
     layer.add(sign,Integer.valueOf(1));
     layer.add(mb,Integer.valueOf(1));
     layer.add(area1,Integer.valueOf(1));
@@ -178,13 +147,6 @@ class Project
     frame.setVisible(true);
     frame.add(layer);
     thread.start();
-=======
-    layer.add(button,Integer.valueOf(1));
-    layer.add(mb,Integer.valueOf(1));
-
-    frame.setVisible(true);
-    frame.add(layer);
->>>>>>> b6b7790224d388c0f05a7cfa341fef09c9e01d72
   }
   public static void main(String[] args) {
     new Project("","");

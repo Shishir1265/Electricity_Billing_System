@@ -1,8 +1,4 @@
 package electricity;
-<<<<<<< HEAD
-
-=======
->>>>>>> b6b7790224d388c0f05a7cfa341fef09c9e01d72
 import usefulresource.popupincorrect;
 import java.awt.Color;
 import java.awt.Dimension;
@@ -24,10 +20,6 @@ import javax.swing.JButton;
 import javax.swing.JComboBox;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
-<<<<<<< HEAD
-=======
-import javax.swing.JOptionPane;
->>>>>>> b6b7790224d388c0f05a7cfa341fef09c9e01d72
 import javax.swing.JPanel;
 import javax.swing.JPasswordField;
 import javax.swing.JSeparator;
@@ -40,11 +32,7 @@ public class Login implements ActionListener{
     JTextField tf;
     JPasswordField p;
     JComboBox<String> c;
-<<<<<<< HEAD
     JLabel l1,l2,wrong;
-=======
-    JLabel l1,l2,l4,wrong;
->>>>>>> b6b7790224d388c0f05a7cfa341fef09c9e01d72
     JSeparator line1,line2;
     JLabel panel;
 
@@ -226,24 +214,13 @@ public class Login implements ActionListener{
         {
             Conn c1 = new Conn();
             String a  = tf.getText();
-<<<<<<< HEAD
             String b  = String.valueOf(p.getPassword());
-=======
-            String b  = Arrays.toString(p.getPassword());
->>>>>>> b6b7790224d388c0f05a7cfa341fef09c9e01d72
             String user = (String) c.getSelectedItem();
             String q  = "select * from login where username = '"+a+"' and password = '"+b+"' and user = '"+user+"'";
             ResultSet rs = null;
             try {
                 rs = c1.s.executeQuery(q);
-<<<<<<< HEAD
    
-=======
-            } catch (SQLException ex) {
-                Logger.getLogger(Login.class.getName()).log(Level.SEVERE, null, ex);
-            }
-            try{
->>>>>>> b6b7790224d388c0f05a7cfa341fef09c9e01d72
                 if(rs.next()){
                 String meter = rs.getString("meter_no");
                 new Project(meter, user);
@@ -253,15 +230,8 @@ public class Login implements ActionListener{
                     tf.setText("");
                     p.setText("");
                 }
-<<<<<<< HEAD
             }
             catch (Exception ex) {System.out.print("aaaaaaaaaaaaaahhhhh");}
-=======
-            }catch(Exception ae){
-                ae.printStackTrace();
-                System.out.println("error: "+ae);
-            }
->>>>>>> b6b7790224d388c0f05a7cfa341fef09c9e01d72
             }else if(e.getSource() == sign){
                 frame.dispose();
                 new Signup();
