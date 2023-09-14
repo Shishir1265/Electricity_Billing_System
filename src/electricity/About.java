@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> b6b7790224d388c0f05a7cfa341fef09c9e01d72
 package electricity;
 
 /* @author Shishir */

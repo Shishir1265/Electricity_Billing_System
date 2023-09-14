@@ -211,7 +211,11 @@ public class Signup implements ActionListener
         if(e.getSource()==create){
             String username = t1.getText();
             String name = t2.getText();
+<<<<<<< HEAD
             String password = String.valueOf(p.getPassword());
+=======
+            String password = p.getPassword().toString();
+>>>>>>> b6b7790224d388c0f05a7cfa341fef09c9e01d72
             var user = (String) c.getSelectedItem();
             String meter = t3.getText();
             try{
