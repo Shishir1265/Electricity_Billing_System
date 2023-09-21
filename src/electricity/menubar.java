@@ -22,7 +22,7 @@ public class menubar implements ActionListener {
     menubar(JMenuBar mb, String person, JFrame frame, String meter) {
         this.frame = frame;
         this.meter = meter;
-        Font f = new Font("Verdana", Font.PLAIN, 20);
+        Font f = new Font("Verdana", Font.PLAIN, 15);
         Color c = new Color(105, 127, 226);
 
         /* First Column */
@@ -38,7 +38,7 @@ public class menubar implements ActionListener {
         m1.setFont(new Font("monospaced", Font.PLAIN, 12));
         m1.setMnemonic(KeyEvent.VK_D);
         m1.setBackground(Color.WHITE);
-        m1.setSize(30, 20);
+        m1.setSize(20, 10);
         m1.setFont(f);
         m1.setForeground(c);
         
@@ -46,15 +46,27 @@ public class menubar implements ActionListener {
         m2.setFont(new Font("monospaced", Font.PLAIN, 12));
         m2.setMnemonic(KeyEvent.VK_M);
         m2.setBackground(Color.WHITE);
+        m2.setSize(20, 10);
+        m2.setFont(f);
+        m2.setForeground(c);
+
 
         /* ---- Deposit Details ----- */
         m3.setFont(new Font("monospaced", Font.PLAIN, 12));
         m3.setMnemonic(KeyEvent.VK_D);
         m3.setBackground(Color.WHITE);
+        m3.setSize(20, 10);
+        m3.setFont(f);
+        m3.setForeground(c);
+
 
         m4.setFont(new Font("monospaced", Font.PLAIN, 12));
         m4.setMnemonic(KeyEvent.VK_C);
         m4.setBackground(Color.WHITE);
+        m4.setSize(20, 10);
+        m4.setFont(f);
+        m4.setForeground(c);
+
 
         m1.addActionListener(this);
         m2.addActionListener(this);
@@ -72,7 +84,7 @@ public class menubar implements ActionListener {
         info1.setFont(new Font("monospaced", Font.PLAIN, 12));
         info1.setMnemonic(KeyEvent.VK_U);
         info1.setBackground(Color.WHITE);
-        info1.setSize(30, 20);
+        info1.setSize(20, 10);
         info1.setFont(f);
         info1.setForeground(c);
 
@@ -80,7 +92,7 @@ public class menubar implements ActionListener {
         info2.setFont(new Font("monospaced", Font.PLAIN, 12));
         info2.setMnemonic(KeyEvent.VK_V);
         info2.setBackground(Color.WHITE);
-        info2.setSize(30, 20);
+        info2.setSize(20, 10);
         info2.setFont(f);
         info2.setForeground(c);
 
@@ -97,7 +109,7 @@ public class menubar implements ActionListener {
         u1.setFont(new Font("monospaced", Font.PLAIN, 12));
         u1.setMnemonic(KeyEvent.VK_P);
         u1.setBackground(Color.WHITE);
-        u1.setSize(30, 20);
+        u1.setSize(20, 10);
         u1.setFont(f);
         u1.setForeground(c);
 
@@ -105,7 +117,7 @@ public class menubar implements ActionListener {
         u3.setFont(new Font("monospaced", Font.PLAIN, 12));
         u3.setMnemonic(KeyEvent.VK_B);
         u3.setBackground(Color.WHITE);
-        u3.setSize(30, 20);
+        u3.setSize(20, 10);
         u3.setFont(f);
         u3.setForeground(c);
 
@@ -122,7 +134,7 @@ public class menubar implements ActionListener {
         r1.setFont(new Font("monospaced", Font.PLAIN, 12));
         r1.setMnemonic(KeyEvent.VK_M);
         r1.setBackground(Color.WHITE);
-        r1.setSize(30, 20);
+        r1.setSize(20, 10);
         r1.setFont(f);
         r1.setForeground(c);
 
@@ -140,7 +152,7 @@ public class menubar implements ActionListener {
         ut1.setFont(new Font("monospaced", Font.PLAIN, 12));
         ut1.setMnemonic(KeyEvent.VK_N);
         ut1.setBackground(Color.WHITE);
-        ut1.setSize(30, 20);
+        ut1.setSize(20, 10);
         ut1.setFont(f);
         ut1.setForeground(c);
 
@@ -148,7 +160,7 @@ public class menubar implements ActionListener {
         ut2.setFont(new Font("monospaced", Font.PLAIN, 12));
         ut2.setMnemonic(KeyEvent.VK_C);
         ut2.setBackground(Color.WHITE);
-        ut2.setSize(30, 20);
+        ut2.setSize(20, 10);
         ut2.setFont(f);
         ut2.setForeground(c);
 
@@ -156,7 +168,7 @@ public class menubar implements ActionListener {
         ut3.setFont(new Font("monospaced", Font.PLAIN, 12));
         ut3.setMnemonic(KeyEvent.VK_W);
         ut3.setBackground(Color.WHITE);
-        ut3.setSize(30, 20);
+        ut3.setSize(20, 10);
         ut3.setFont(f);
         ut3.setForeground(c);
 
@@ -174,7 +186,7 @@ public class menubar implements ActionListener {
         ex.setFont(new Font("monospaced", Font.PLAIN, 12));
         ex.setMnemonic(KeyEvent.VK_L);
         ex.setBackground(Color.WHITE);
-        ex.setSize(30, 20);
+        ex.setSize(20, 10);
         ex.setFont(f);
         ex.setForeground(c);
         ex.addActionListener(this);

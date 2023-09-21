@@ -10,6 +10,8 @@ import java.awt.event.MouseEvent;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseMotionAdapter;
 import java.awt.geom.RoundRectangle2D;
+import java.util.Timer;
+import java.util.TimerTask;
 import javax.swing.BorderFactory;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
@@ -171,8 +173,9 @@ public class Signup implements ActionListener
         c.setFocusable(false);
         
         popup = new JLabel();
-        popup.setBounds(30, 335, 260, 40);
+        popup.setBounds(84, 335, 260, 40);
         popup.setFont(f);
+        popup.setForeground(Color.white);
         popup.setOpaque(false);
 
         JLayeredPane layer = new JLayeredPane();
@@ -211,6 +214,9 @@ public class Signup implements ActionListener
         if(e.getSource()==create){
             String username = t1.getText();
             String name = t2.getText();
+//            while(String.valueOf(p.getPassword()).length()<8){
+//                new popupincorrect(10,popup,"Password is too short");
+//            }
             String password = String.valueOf(p.getPassword());
             var user = (String) c.getSelectedItem();
             String meter = t3.getText();
@@ -223,9 +229,16 @@ public class Signup implements ActionListener
                     str = "update login set username = '"+username+"', name = '"+name+"', password = '"+password+"', user = '"+user+"' where meter_no = '"+t3.getText()+"'";
                 }
                 c.s.executeUpdate(str);
-                new popupincorrect(10,popup,"Account Created Successfully");
-                frame.dispose();
-                new Login();
+                new popupincorrect(3,popup,"Account Created");
+                Timer t = new Timer();
+                TimerTask ta = new TimerTask() {
+                    @Override
+                    public void run() {
+                        frame.dispose();
+                        new Login();
+                    }
+                };
+                t.schedule(ta,4000);
             }catch(Exception ae){
                 System.out.println(ae+" error!!! :(");}
         }else if (e.getSource()== back){
