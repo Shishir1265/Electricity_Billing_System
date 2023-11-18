@@ -18,6 +18,7 @@ import javax.swing.JMenuBar;
 import javax.swing.JPasswordField;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
+import static javax.swing.WindowConstants.EXIT_ON_CLOSE;
 
 class Project
 {
@@ -105,7 +106,7 @@ class Project
         public void run(){
           for(int i=0;i<str.length();i++){
             try{
-              Thread.sleep(20);
+              Thread.sleep(15);
             }catch(InterruptedException e){
                 System.out.println("hellllllll");
             }
@@ -144,6 +145,7 @@ class Project
     layer.add(p,Integer.valueOf(1));
     layer.add(notice,Integer.valueOf(1));
 
+    frame.setDefaultCloseOperation(EXIT_ON_CLOSE);
     frame.setVisible(true);
     frame.add(layer);
     thread.start();

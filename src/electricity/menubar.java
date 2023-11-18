@@ -232,7 +232,7 @@ public class menubar implements ActionListener {
     public void actionPerformed(ActionEvent ae) {
         String msg = ae.getActionCommand();
         if (msg.equals("Customer Details")) {
-            // new CustomerDetails();
+            new CustomerDetails();
 
         } else if (msg.equals("New Customer")) {
             // new NewCustomer();
