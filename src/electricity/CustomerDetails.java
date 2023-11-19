@@ -50,7 +50,6 @@ public class CustomerDetails extends JFrame implements ActionListener {
         setLayout(null);
         getContentPane().setBackground(Color.lightGray);
         setResizable(false);
-        setDefaultCloseOperation(EXIT_ON_CLOSE);
         ImageIcon icon = new ImageIcon(ClassLoader.getSystemResource("icon/icon.png"));
         setIconImage(icon.getImage());
 

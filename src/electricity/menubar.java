@@ -235,7 +235,7 @@ public class menubar implements ActionListener {
             new CustomerDetails();
 
         } else if (msg.equals("New Customer")) {
-            // new NewCustomer();
+             new NewCustomer();
 
         } else if (msg.equals("Calculate Bill")) {
             // new CalculateBill();
@@ -264,7 +264,7 @@ public class menubar implements ActionListener {
         } else if (msg.equals("Generate Bill")) {
             // new GenerateBill(meter);
         } else if (msg.equals("Deposit Details")) {
-            // new DepositDetails();
+             new DepositDetails();
         } else if (msg.equals("View Information")) {
             // new ViewInformation(meter);
         } else if (msg.equals("Update Info")) {
