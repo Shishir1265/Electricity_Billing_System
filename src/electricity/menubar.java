@@ -238,7 +238,7 @@ public class menubar implements ActionListener {
              new NewCustomer();
 
         } else if (msg.equals("Calculate Bill")) {
-            // new CalculateBill();
+             new CalculateBill();
 
         } else if (msg.equals("Pay Bill")) {
             // new PayBill(meter);
