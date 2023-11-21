@@ -266,9 +266,9 @@ public class menubar implements ActionListener {
         } else if (msg.equals("Deposit Details")) {
              new DepositDetails();
         } else if (msg.equals("View Information")) {
-            // new ViewInformation(meter);
-        } else if (msg.equals("Update Info")) {
-            // new UpdateInformation(meter);
+//             new ViewInformation(meter);
+        } else if (msg.equals("Update")) {
+             new UpdateInformation(meter);
         } else if (msg.equals("Bill Details")) {
             // new BillDetails(meter);
         }

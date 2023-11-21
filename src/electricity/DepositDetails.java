@@ -3,6 +3,8 @@ package electricity;
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
+import javax.swing.table.DefaultTableCellRenderer;
+
 import java.sql.*;
 import net.proteanit.sql.DbUtils;
 
@@ -16,28 +18,38 @@ public class DepositDetails extends JFrame implements ActionListener{
     String y[][] = new String[40][8];
     int i=0, j=0;
     DepositDetails(){
-        setTitle("Deposit Details");
-        setSize(700,750);
+        super("Deposit Details");
+        setSize(770,610);
         setLocationRelativeTo(null);
-        setResizable(false);
         setLayout(null);
         ImageIcon icon = new ImageIcon(ClassLoader.getSystemResource("icon/icon.png"));
         setIconImage(icon.getImage());
         getContentPane().setBackground(Color.WHITE);
         
         l1 = new JLabel("Sort by Meter Number");
-        l1.setBounds(20, 20, 150, 20);
+        l1.setBounds(30, 20, 160, 20);
         add(l1);
         
         c1 = new Choice();
+        c1.setFocusable(false);
         
         l2 = new JLabel("Sort By Month");
-        l2.setBounds(400, 20, 100, 20);
+        l2.setBounds(400, 20, 110, 20);
         add(l2);
         
         c2 = new Choice();
+        c2.setFocusable(false);
         
         t1 = new JTable(y,x);
+        t1.setRowHeight(35);
+
+        DefaultTableCellRenderer rightRenderer = new DefaultTableCellRenderer();
+        rightRenderer.setHorizontalAlignment(SwingConstants.CENTER);
+        rightRenderer.setBackground(new Color(238, 238, 238));
+
+        for (int c = 0; c < t1.getColumnCount(); c++) {
+            t1.getColumnModel().getColumn(c).setCellRenderer(rightRenderer);
+        }
         
         try{
             Conn c  = new Conn();
@@ -56,11 +68,10 @@ public class DepositDetails extends JFrame implements ActionListener{
             e.printStackTrace();
         }
         
-        c1.setBounds(180,20, 150, 20);
+        c1.setBounds(190,20, 150, 20);
         add(c1);
         
-        
-        c2.setBounds(520, 20, 150, 20);
+        c2.setBounds(510, 20, 150, 20);
         c2.add("January");
         c2.add("February");
         c2.add("March");
@@ -75,20 +86,27 @@ public class DepositDetails extends JFrame implements ActionListener{
         c2.add("December");
         add(c2);
         
-        
         b1 = new JButton("Search");
-        b1.setBounds(20, 70, 80, 20);
+        b1.setBounds(30, 60, 100, 30);
+        b1.setFocusable(false);
+        b1.setBorder(null);
         b1.addActionListener(this);
+        b1.setBackground(Color.lightGray);
         add(b1);
         
         b2 = new JButton("Print");
-        b2.setBounds(120, 70, 80, 20);
+        b2.setBounds(160, 60, 100, 30);
+        b2.setFocusable(false);
+        b2.setBorder(null);
+        b2.setBackground(Color.lightGray);
         b2.addActionListener(this);
         add(b2);
         
         JScrollPane sp = new JScrollPane(t1);
-        sp.setBounds(0, 100, 700, 650);
+        sp.setBounds(30, 110, 700, 440);
+        sp.setFocusable(false);
         add(sp);
+        setDefaultCloseOperation(EXIT_ON_CLOSE);
         setVisible(true);
         
     }
@@ -106,6 +124,7 @@ public class DepositDetails extends JFrame implements ActionListener{
             }catch(Exception e){}
         }
     }
+    
     public static void main(String[] args){
         new DepositDetails();
     }
