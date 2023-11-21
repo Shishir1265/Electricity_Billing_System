@@ -106,7 +106,6 @@ public class DepositDetails extends JFrame implements ActionListener{
         sp.setBounds(30, 110, 700, 440);
         sp.setFocusable(false);
         add(sp);
-        setDefaultCloseOperation(EXIT_ON_CLOSE);
         setVisible(true);
         
     }
