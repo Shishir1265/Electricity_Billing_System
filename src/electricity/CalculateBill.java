@@ -90,7 +90,6 @@ public class CalculateBill extends JFrame implements ActionListener {
 
         t1 = new JTextField();
         t1.setBounds(220, 220, 180, 20);
-        t1.setFocusable(false);
 
         c2 = new Choice();
         c2.setBounds(220, 270, 180, 20);

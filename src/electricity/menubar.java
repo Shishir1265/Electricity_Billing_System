@@ -241,7 +241,7 @@ public class menubar implements ActionListener {
              new CalculateBill();
 
         } else if (msg.equals("Pay Bill")) {
-            // new PayBill(meter);
+             new PayBill(meter);
 
         } else if (msg.equals("Notepad")) {
             try {
@@ -262,15 +262,15 @@ public class menubar implements ActionListener {
             frame.dispose();
             new Login();
         } else if (msg.equals("Generate Bill")) {
-            // new GenerateBill(meter);
+             new GenerateBill(meter);
         } else if (msg.equals("Deposit Details")) {
              new DepositDetails();
         } else if (msg.equals("View")) {
              new ViewInformation(meter);
         } else if (msg.equals("Update")) {
              new UpdateInformation(meter);
-        } else if (msg.equals("Bill Details")) {
-            // new BillDetails(meter);
+        } else if (msg.equals("Bill")) {
+             new BillDetails(meter);
         }
     }
 
