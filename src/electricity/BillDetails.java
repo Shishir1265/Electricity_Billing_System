@@ -50,7 +50,6 @@ public class BillDetails extends JFrame {
         add(sp);
         setLocationRelativeTo(null);
         setVisible(true);
-        setDefaultCloseOperation(EXIT_ON_CLOSE);
     }
 
     public static void main(String[] args) {

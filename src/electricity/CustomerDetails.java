@@ -54,6 +54,7 @@ public class CustomerDetails extends JFrame implements ActionListener {
         setIconImage(icon.getImage());
 
         table = new JTable(y, x);
+        
         table.setRowHeight(37);
         table.setFocusable(false);
         table.setFont(new Font("TimesRoman", Font.PLAIN, 17));

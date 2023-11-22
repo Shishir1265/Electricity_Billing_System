@@ -63,16 +63,16 @@ public class PayBill extends JFrame implements ActionListener {
         l1.setBackground(new Color(206,206,206));
         l1.setBounds(80, 80, 100, 20);
 
-        JLabel l11 = new JLabel();
+        l11 = new JLabel();
         l11.setBounds(280, 75, 150, 30);
 
-        JLabel l2 = new JLabel("Name");
+        l2 = new JLabel("Name");
         l2.setFont(new Font("Comic Sans MS", Font.PLAIN, 19));
         l2.setOpaque(true);
         l2.setBackground(new Color(206,206,206));
         l2.setBounds(80, 140, 100, 20);
 
-        JLabel l12 = new JLabel();
+        l12 = new JLabel();
         l12.setBounds(280, 135, 150, 30);
 
         l3 = new JLabel("Month");
@@ -97,6 +97,32 @@ public class PayBill extends JFrame implements ActionListener {
         c1.add("November");
         c1.add("December");
 
+        l4 = new JLabel("Units");
+        l4.setFont(new Font("Comic Sans MS", Font.PLAIN, 19));
+        l4.setOpaque(true);
+        l4.setBackground(new Color(206,206,206));
+        l4.setBounds(80, 260, 100, 20);
+
+        l13 = new JLabel();
+        l13.setBounds(280, 255, 150, 30);
+
+        l5 = new JLabel("Total Bill");
+        l5.setFont(new Font("Comic Sans MS", Font.PLAIN, 19));
+        l5.setOpaque(true);
+        l5.setBackground(new Color(206,206,206));
+        l5.setBounds(80, 320, 100, 20);
+
+        l14 = new JLabel();
+        l14.setBounds(280, 315, 150, 30);
+
+        l6 = new JLabel("Status");
+        l6.setFont(new Font("Comic Sans MS", Font.PLAIN, 19));
+        l6.setBounds(80, 380, 100, 20);
+
+        l15 = new JLabel();
+        l15.setBounds(280, 375, 150, 30);
+        l15.setForeground(Color.RED);
+        
         try{
             Conn c = new Conn();
             ResultSet rs = c.s.executeQuery("select * from customer where meter = '"+meter+"'");
@@ -126,32 +152,6 @@ public class PayBill extends JFrame implements ActionListener {
                 }catch(Exception e){}
             }
         });
-
-        l4 = new JLabel("Units");
-        l4.setFont(new Font("Comic Sans MS", Font.PLAIN, 19));
-        l4.setOpaque(true);
-        l4.setBackground(new Color(206,206,206));
-        l4.setBounds(80, 260, 100, 20);
-
-        JLabel l13 = new JLabel();
-        l13.setBounds(280, 255, 150, 30);
-
-        l5 = new JLabel("Total Bill");
-        l5.setFont(new Font("Comic Sans MS", Font.PLAIN, 19));
-        l5.setOpaque(true);
-        l5.setBackground(new Color(206,206,206));
-        l5.setBounds(80, 320, 100, 20);
-
-        JLabel l14 = new JLabel();
-        l14.setBounds(280, 315, 150, 30);
-
-        l6 = new JLabel("Status");
-        l6.setFont(new Font("Comic Sans MS", Font.PLAIN, 19));
-        l6.setBounds(80, 380, 100, 20);
-
-        JLabel l15 = new JLabel();
-        l15.setBounds(280, 375, 150, 30);
-        l15.setForeground(Color.RED);
 
         b1 = new JButton("Pay");
         b1.setFont(new Font ("Comic Sans MS", Font.PLAIN, 15));
